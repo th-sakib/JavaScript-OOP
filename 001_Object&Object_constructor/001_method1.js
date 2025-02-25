@@ -17,5 +17,14 @@ function createUser(username, age) {
 
 const user1 = createUser("sakib", 20);
 const user2 = createUser("Thamidul", 21);
-console.log("user1", user1);
-console.log("user2", user2);
+
+user1.getYear === user2.getYear; // result: false // That is explain that, these two functoin is on defferent location of memory. it is not good practice (memory location changes in every object we create)
+
+// using object contractor
+function Player(name, marker) {
+  this.name = name;
+  this.marker = marker;
+}
+
+const player1 = new Player("sakib", "O");
+const player2 = new Player("thamidul", "X"); // we have to use the "new" keyword
