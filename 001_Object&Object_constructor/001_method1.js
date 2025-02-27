@@ -3,6 +3,7 @@ const user = {
   age: 20,
 }; // in this case the user object is not flexible. if we want to create another object with same structure we have to re-define another object...
 
+// ************** The Factory Function **************
 function createUser(username, age) {
   const user = {
     username,
@@ -20,7 +21,8 @@ const user2 = createUser("Thamidul", 21);
 
 user1.getYear === user2.getYear; // result: false // That is explain that, these two functoin is on defferent location of memory. it is not good practice (memory location changes in every object we create)
 
-// using object contractor
+// ************** The Object Contructor **************
+// using object contructor
 function Player(name, marker) {
   this.name = name;
   this.marker = marker;
