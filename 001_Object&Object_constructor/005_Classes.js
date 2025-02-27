@@ -35,6 +35,6 @@ class CreateUser {
 }
 
 const user51 = new CreateUser("sakib", 20, "very secret");
-console.log(user51);
+// console.log(user51);
 
-console.dir(CreateUser);
+// console.dir(CreateUser);
