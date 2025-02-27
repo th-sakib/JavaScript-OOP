@@ -10,7 +10,21 @@ class CreateUser {
     this.#secret = secret;
   }
 
-  // in this section everything we define will be created in the protype of this class (function under the hood)
+  static testing = "testing"; // static props can be accessed by using the class (CreateUser.testing)
+  static testMethod = function () {
+    return "testing method";
+  };
+
+  static {
+    this.testing2 = "testing 2";
+    this.testingMethod2 = function () {
+      return "resting method 2  ";
+    };
+    console.log("block of code");
+  }
+
+  // in this section everything we define will be created,
+  // in the protype [except static method and properties] of this class (function under the hood)
   getBirthYear() {
     return new Date().getFullYear() - this.age;
   } // the method defined here is going to autometically saved in the prototype of this class
